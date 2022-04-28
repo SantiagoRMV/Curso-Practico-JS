@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Ejemplo Eventos onchange</title>
+</head>
+<body>
+<p>Mi nombre es:
+<input type="text" name="nombre" id="formu">
+</p>
+<script>
+document.getElementById("formu").onchange = function() {mayus()};
+function mayus() {
+alert('Esta casilla ha cambiado su contenido')
+  let txt = document.getElementById("formu");
+  txt.value = txt.value.toUpperCase();
+}
+</script>
+</body>
+</html>

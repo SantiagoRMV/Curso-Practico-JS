@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Ejemplo  de blur() y focus()</title>
+<body>
+<script>
+function selec_objeto()
+{
+document.getElementById('casilla').focus()
+}
+function deselec_objeto()
+{
+document.getElementById('casilla').blur()
+}
+</script>
+
+<input type="input" id="casilla" value="Su nombre...">
+<br />
+<input type="button" onclick="selec_objeto()" value="focus()">
+<input type="button" onclick="deselec_objeto()" value="blur()">
+</body>
+</html>

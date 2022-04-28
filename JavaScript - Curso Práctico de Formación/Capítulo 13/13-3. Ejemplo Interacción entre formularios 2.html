@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+<title>Ejemplo Interacción entre Formularios</title>
+</head>
+<body>
+<form id="frm1">
+<p><b>Seleccione a los invitados:</b><br />
+<select name="invitados" size="1">
+<option value="">INVITADOS</option>
+<option value="Pedro">Pedro</option>
+<option value="Luis">Luis</option>
+<option value="Antonio">Antonio</option>
+<option value="Silvia">Silvia</option>
+<option value="Marta">Marta</option>
+</select>
+<input type="button" value="Añadir" onclick="ok(form.elements[0].options[form.invitados.selectedIndex].value)">
+</form>
+<form id="invt">
+<p><b>Invitados añadidos:</b><br />
+<textarea cols="20" rows="4" name="list">
+</textarea></p>
+</form>
+<script>
+let valoranterior = "";
+function ok(Item) { 
+if (Item != "") {
+let box= Item + "\n" + valoranterior; document.forms.invt.list.value = box; 
+valoranterior = document.forms[1].list.value;
+}
+}
+</script>
+</body>
+</html>

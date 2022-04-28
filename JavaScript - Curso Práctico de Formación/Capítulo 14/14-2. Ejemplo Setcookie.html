@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+<title>Ejemplo leer cookie</title>
+</head>
+<body>
+<script>
+function leercookie() {
+let cookies = document.cookie;
+document.write ("TODAS LAS COOKIES" + "<br />");
+document.write ("Todas las cookies : " + cookies + "<br />");
+matrizcookies = cookies.split(';');
+for(let i=0; i<matrizcookies.length; i++) {
+name = matrizcookies[i].split('=')[0];
+value = matrizcookies[i].split('=')[1];
+document.write ("Su nombre es : " + name + " y su valor : " + value + "<br />");
+ }  }
+</script> 
+<form name = "frm" >
+<input type = "button" value ="Leer Cookie" onclick ="leercookie()">
+</form>      
+</body>
+</html>

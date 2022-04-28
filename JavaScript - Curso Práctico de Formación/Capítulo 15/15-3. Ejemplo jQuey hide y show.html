@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+<title>Ejemplo animación</title>
+<script src="jquery-3.6.0.min.js"></script>
+<style>
+.cuadro { 
+margin:50px; padding:50px; 
+border:2px solid rgb(238, 34, 34); 
+background-color: yellow;
+border-radius: 50px;
+width:100px; 
+height:100px;
+ }
+ </style>
+</head>
+<body>
+<div class = "cuadro"></div>
+<input id = "Ocultar" type = "button" value = "Ocultar" />   
+<input id = "Mostrar" type = "button" value = "Mostrar" />
+<script>
+$(document).ready(function() {
+
+$("#Mostrar").click(function () {
+   $(".cuadro").show(2000);
+});
+
+$("#Ocultar").click(function () {
+   $(".cuadro").hide(2000);
+});
+});
+</script> 
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Ejemplo objeto event</title>
+</head>
+<body>
+    <button id="boton">Pulsa aquí con cualquier botón del ratón</button>
+    <p id="btn_detectado"></p>
+<script>
+  let boton = document.querySelector('#boton');
+// desactivamos el menu contextual del botón derecho
+  boton.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+        });
+
+boton.addEventListener('mouseup', (e) => {
+    let mensaje = document.querySelector('#btn_detectado');
+    switch (e.button) {
+        case 0:
+            mensaje.textContent = 'Has clicado con el botón izquierdo.';
+            break;
+        case 1:
+            mensaje.textContent = 'Has clicado con el botón central.';
+            break;
+        case 2:
+            mensaje.textContent = 'Has clicado con el botón derecho.';
+            break;
+        default:
+            mensaje.textContent = `Botón desconocido: ${event.button}`;
+    }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Ejemplo clases</title>
+<body>
+<script>
+class movil {
+  constructor(marca, modelo, color) {
+      this.marca = marca;
+      this.modelo = modelo;
+      this.color = color;
+  }
+  resultado() {
+      return this.marca + ' ' + this.modelo + ' ' + this.color;
+  }
+}
+const mitelefono = new movil('Iphone', '12', "negro");
+document.write(mitelefono.resultado() + "<br />");
+document.write(mitelefono.marca);
+</script>
+</body>
+</html>

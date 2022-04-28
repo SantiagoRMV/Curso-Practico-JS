@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Ejemplo Eventos onsubmit</title>
+</head>
+<body>
+<form action="" id="formu" onsubmit="verificar(this);">
+<p>Nombre: <input type="text" size="30" id="nombre">
+ <br />
+ Edad: <input type="text" size="3" id="edad">
+<br />
+<input type="submit" value="Verificar">
+</p>
+</form>
+<script>
+function verificar() {
+let numeros="0123456789"; 
+let tmp;
+if (document.forms.formu.nombre.value==""){ 
+alert("Introduzca su nombre"); 
+return false;
+}
+if (document.forms.formu.edad.value=="") { 
+    alert("Introduzca su edad"); 
+    return false;
+}
+for (let i=0; i<document.forms.formu.edad.value.length; i++) { 
+    tmp=document.forms.formu.edad.value.substring(i, i+1) 
+    if (numeros.indexOf(tmp)==-1) {
+alert("La edad debe ser en números"); 
+return false;
+}}
+return true
+}
+</script>
+</body>
+</html>

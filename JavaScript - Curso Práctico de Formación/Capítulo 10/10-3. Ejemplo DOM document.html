@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Ejemplo método getElementByClassName()</title>
+</head>
+<body>
+<style>
+p {color: blue; background-color: rgb(243, 238, 172)}
+</style>
+<p class="estilo1">En un lugar de la Mancha</p>
+<p class="estilo1">de cuyo nombre SI QUIERO acordarme,</p>
+<p class="estilo1">no ha mucho tiempo que vivía...</p>
+<button onclick="sustituir()">Sustituir Texto</button>
+<script>
+  function sustituir() {
+      let p = document.getElementsByClassName("estilo1");
+      p[1].innerHTML = "de cuyo nombre NO QUIERO acordarme,";
+      p[1].style.color = "green";   
+   }
+</script>
+</body>
+</html>
+
+

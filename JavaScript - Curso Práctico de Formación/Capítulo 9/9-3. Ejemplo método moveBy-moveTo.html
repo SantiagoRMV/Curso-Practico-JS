@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Ejemplo método moveBy()-moveTo()</title>
+ </head>
+<body>
+<script>
+let nueva_ventana;
+function abrir_ventana() {
+  nueva_ventana=window.open("", "nueva_ventana", "width=200, height=200");
+  nueva_ventana.document.write("<p>EDITORIAL RC LIBROS</p>");
+}
+function mover_to() {
+  nueva_ventana.moveTo(300, 200);
+  nueva_ventana.focus();
+}
+function mover_by() {
+  nueva_ventana.moveBy(150, 150);
+  nueva_ventana.focus();
+}
+</script>
+<button onclick="abrir_ventana()">Generar nueva ventana</button>
+<button onclick="mover_to()">Ejemplo moveTo</button>
+<button onclick="mover_by()">Ejemplo moveBy</button>
+</body>
+</html>
+

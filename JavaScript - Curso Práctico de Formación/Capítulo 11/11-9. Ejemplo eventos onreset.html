@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Ejemplo Evento onreset</title>
+</head>
+<body>
+<form action="" id="datos");">
+<p id="parrafo">Introduzca sus datos. Gracias.</p> 
+Nombre: <input type="text" /><br /> 
+Apellidos: <input type="text" /><br /> 
+<input type="button" value="Confirmar Reset" onclick="avisoreset()">
+<input type="reset" value="Evento Reset">
+</form>
+<script>
+function avisoreset() {
+if(confirm("!ATENCIÓN¡. Los datos del formulario se van a borrar.")) { 
+    document.forms.datos.reset()
+} }
+document.getElementById("datos").onreset = function() {confirma_borrado()};
+function confirma_borrado() {
+  document.getElementById("parrafo").innerHTML = "Los datos se han borrado";
+}
+</script>
+</body>
+</html>

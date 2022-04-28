@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Ejemplo método appendChild y removeChild()</title>
+</head>
+<body>
+<ul id="listado">
+</ul>
+<button onclick="borrar_lista()">Borrar elemento de la Lista</button>
+<script>
+function crear_lista(item) {
+let li = document.createElement('li');
+li.textContent = item;
+return li;
+ }
+let listado = document.querySelector('#listado');
+listado.appendChild(crear_lista('Capítulo 1'));
+listado.appendChild(crear_lista('Capítulo 2'));
+listado.appendChild(crear_lista('Capítulo 3'));
+listado.appendChild(crear_lista('Capítulo 4'));
+function borrar_lista(item) {
+listado = document.getElementById('listado');
+listado.removeChild(listado.lastElementChild);
+}
+</script>
+</body>
+</html>

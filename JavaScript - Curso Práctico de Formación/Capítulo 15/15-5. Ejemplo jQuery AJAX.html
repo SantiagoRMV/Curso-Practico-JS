@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+<title>Ejemplo jQuery AJAX</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+<div id ="box">
+<h3>*** AQUÍ MOSTRAREMOS EL CONTENIDO EXTERNO ***</h3>
+</div>
+<button>Cargar Contenido Externo</button>
+<script>
+$(document).ready(function(){
+  $("button").click(function(event){
+    $("#box").load("15-5-data.html");
+  });
+});
+</script> 
+</body>
+</html>

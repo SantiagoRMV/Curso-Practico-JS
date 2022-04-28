@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Condicional else if</title>
+<body>
+<script>
+// Obtenemos la hora del sistema
+let msg = new Date();
+
+// Hora actual del sistema
+let lahora = msg.getHours();
+document.write ("Ahora mismo son las " + lahora);
+if (lahora > 06 && lahora <= 13) {
+  document.write(". Buenos días.");
+}
+else if (lahora > 13 && lahora <= 20) {
+  document.write(". Buenas tardes.");
+}
+else if (lahora > 20 && lahora <= 24) {
+  document.write(". Buenas noches.");
+}
+else {
+  document.write(". Buena madrugada.");
+}
+</script>
+</body>
+</html>

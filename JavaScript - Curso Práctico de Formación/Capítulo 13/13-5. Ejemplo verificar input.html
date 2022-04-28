@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+<title>Ejemplo validación email</title>
+</head>
+<body>
+<form id="correo">
+<input type="text" id="email" size="50">
+<input type="button" value="Verificar" onclick="vermail(this.form.email.value);">
+</form>
+<script type="text/javascript"> function vermail(valor)             {
+if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(valor)) {
+alert("La dirección de correo\n\n " + valor + " \n\nES APARENTEMENTE VÁLIDA." )
+  }
+ else
+   {
+alert("La dirección de correo es APARENTEMENTE INCORRECTA.");
+  }
+  }
+</script>       
+</body>
+</html>

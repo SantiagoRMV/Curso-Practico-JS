@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Ejemplo mes y día semana en texto</title>
+<body>
+<script>
+let fecha = new Date();
+let dia = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes",
+  "Sábado", "Domingo"];
+let mes = ["Enero", "Febrero", "Marzo", "Abril", "Mayo",
+  "Junio", "Julio", "Agosto", "Septiembre", "Octubre",
+  "Noviembre", "Diciembre"];
+document.write ("Hoy es " + dia[fecha.getDay()] + " " + fecha.getDate() +  " del mes de " + mes[fecha.getMonth()]); 
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

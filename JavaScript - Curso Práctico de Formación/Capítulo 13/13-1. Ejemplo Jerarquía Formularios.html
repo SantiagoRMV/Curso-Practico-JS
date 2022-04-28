@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+<title>Ejemplo Jerarquía Formularios</title>
+</head>
+<body>
+<form action="" id="unir_box"><p>
+<input type="text" id="box1" size="18">
+<input type="text" id="box2" size="18">
+<br />
+<input type="button" id="" value="Pulsar" onclick="Unir();" />
+<input type="text" id="resultado" size="18" /></p>
+</form>
+<script>
+function Unir() {
+let box1 = document.forms[0].box1.value;
+let box2 = document.forms.unir_box.elements[1].value; 
+let union = (box1 + " y " + box2);
+document.forms[0].elements[2].value = "La respuesta es"; document.forms[0].elements[3].value = union;
+}
+</script>
+</body>
+</html>

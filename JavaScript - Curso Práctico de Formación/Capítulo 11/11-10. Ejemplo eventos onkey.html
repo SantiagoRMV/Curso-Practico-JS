@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Ejemplo Evento onkeydown, onkeyup y onkeypress</title>
+</head>
+<body>
+<p>EJEMPLO onkeyup</p>
+<form action="" id="formu">
+<p> Escriba su nombre:
+<input type="text" name="a" size="20" onkeyup="up()"> <br />
+ Número de eventos onkeyup:
+<input type="text" name="b" size="4">  
+<script>
+let cuentaup=0;
+function up() {
+cuentaup++; document.forms[0].b.value = cuentaup;
+}
+</script>
+</body>
+</html>

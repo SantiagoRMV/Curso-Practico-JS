@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Ejemplo Método sort()</title>
+<body>
+<script>
+function menormayor(a,b) {
+return a-b
+}
+function mayormenor(a,b) {
+return b-a
+}
+let n = new Array (25,89,123,2,67,98,1000,45,345);
+let l = new Array ("a", "g", "b", "i", "c", "j", "z", "d", "x");
+document.write("Números sin ordenar: " + (n.join()) + "<br />");
+document.write("Ordenados por defecto: " + (n.sort())+ "<br />");
+document.write("Ordenados de menor a mayor: " + (n.sort(menormayor))+ "<br />");
+document.write("Ordenados de mayor a menor: " + (n.sort(mayormenor))+ "<br />");
+document.write("Letras sin ordenar: " + (l.join()) + "<br />");
+document.write("Letras ordenadas por defecto: " + (l.sort()));
+ </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
