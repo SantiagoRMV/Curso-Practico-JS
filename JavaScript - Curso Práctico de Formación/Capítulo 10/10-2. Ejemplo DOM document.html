@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Ejemplo método getElementByTagName()</title>
+</head>
+<body>
+<p>En un lugar de la Mancha</p>
+<p>de cuyo nombre SI QUIERO acordarme,</p>
+<p>no ha mucho tiempo que vivía...</p>
+<button onclick="sustituir()">Sustituir Texto</button>
+<script>
+function sustituir() {
+let lista = document.getElementsByTagName("p")[1];
+lista.innerHTML = "de cuyo nombre NO QUIERO acordarme,";
+}
+</script>
+</body>
+</html>
+
+

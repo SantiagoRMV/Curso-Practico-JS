@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+<title>Ejemplo jQuery</title>
+<script src="jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<p>ENLACES DISPONIBLES</p>
+<a href="https://www.google.es" id="busca">Buscador Google</a><br />
+<a href="https://www.bing.com" id="busca">Buscador Bing</a><br />
+<a href="https://www.nytimes.com/" id="news">The New York Times</a><br />
+<a href="https://www.thetimes.co.uk/" id="news">The Times</a><br />
+<script>
+$(document).ready(function() {
+$("p").css( "color","red" );
+$("a#news").click(function() {
+alert("Vas a visitas un periódico");
+});
+$("a#busca").click(function() {
+alert("Va a visitar un buscador web");
+});
+});
+</script> 
+</body>
+</html>

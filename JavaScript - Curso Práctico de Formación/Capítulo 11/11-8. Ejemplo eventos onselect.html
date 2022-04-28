@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Ejemplo Evento onselect</title>
+</head>
+<body>
+<p>OPCIÓN 1</p>
+<textarea rows="3" cols="40" name="campo" onselect="alert('Se ha seleccionado texto\ren el formulario')">
+Texto para que el usuario pueda seleccionar y testear el script.
+Seleccione un fragmento.
+</textarea>
+<p id="op2">OPCIÓN 2</p>
+Selecciona algo de texto: <input type="text" value="Texto para que el usuario pueda seleccionar." id="txtop2">
+<script>
+document.getElementById("txtop2").onselect = function() {respuesta_onselect()};
+function respuesta_onselect() {
+      document.getElementById("op2").innerHTML = "Has seleccionado texto en el formulario!!";
+    }
+</script>
+</body>
+</html>

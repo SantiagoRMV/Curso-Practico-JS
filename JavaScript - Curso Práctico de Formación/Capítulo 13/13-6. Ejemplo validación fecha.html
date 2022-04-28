@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+<title>Ejemplo validación fecha</title>
+</head>
+<body>
+<form id="frm" >
+Introduce una fecha [dd/mm/aaaa]
+<input type="text" id="fecha" size="20">
+<input type="submit" value="Verificar" onclick="Validar(fecha.value);">
+</form>    
+<script> 
+function Validar(Cadena) {
+let fecha= new String(Cadena);
+let anyo= new String(fecha.substring(fecha.lastIndexOf("/")+1,fecha.length));
+let mes= new String(fecha.substring(fecha.indexOf("/")+1,fecha.lastIndexOf("/")));
+let dia= new String(fecha.substring(0,fecha.indexOf("/")));
+if (isNaN(anyo) || anyo.length<4 || anyo.length>4 || parseFloat(anyo)<1900)
+{
+alert("Año: " + anyo + "\n\nERROR.\nEl formato debe ser xxxx. Por ejemplo 2021"); 
+return false;
+}
+if (isNaN(mes) || parseFloat(mes)<1 || parseFloat(mes)>12) {
+alert("Mes: " + mes + "\n\nERROR.\nIntroduzca el índice de mes del 1 al 12. \nPor ejemplo 10 para Octubre");
+return false;
+}
+if (isNaN(dia) || parseInt(dia)<1 || parseInt(dia)>31) {
+alert("El día no es correcto."); 
+return false;
+}
+if (mes==4 || mes==6 || mes==9 || mes==11 || mes==2) {
+if (mes==2 && dia > 29 || dia>30)
+{
+alert("Día inválido");
+return false;
+}
+}
+alert("La fecha es correcta.");
+}
+</script>       
+</body>
+</html>

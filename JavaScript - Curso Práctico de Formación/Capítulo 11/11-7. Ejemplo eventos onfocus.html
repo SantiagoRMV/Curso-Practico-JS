@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Ejemplo Eventos onfocus y onblur</title>
+</head>
+<body>
+<style>.error_mail {background: red;border-color: red;}</style>
+Introduce tu e-mail: <input type="email" id="intro_mail">
+Omite el símbolo @ para ver como afecta.
+<script>
+intro_mail.onblur = function() {
+    if (!this.value.includes('@')) { 
+this.classList.add("error_mail");
+intro_mail.focus();
+    } else {
+this.classList.remove("error_mail");
+    }
+  };
+</script>
+</body>
+</html>

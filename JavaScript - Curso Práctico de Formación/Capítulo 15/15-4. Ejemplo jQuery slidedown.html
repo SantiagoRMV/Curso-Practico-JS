@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+<title>Ejemplo jQuery arrastra y soltar</title>
+<script src="jquery-3.6.0.min.js"></script>
+<style>
+   #slide {display: none; height: 60px; background: #CCCCCC; border: 1px solid #7466f3; width: 700px; text-align: center;}
+   #pregunta {background: #ebca0f; border: 1px solid #7466f3; width: 700px; text-align: center;}
+   #click {background: #0feb34; border: 1px solid #7466f3; width: 700px; text-align: center;}
+  </style>
+</head>
+<body>
+<p id="pregunta">PREGUNTA:<br />
+¿Cuál es la montaña más alta del mundo?</p>
+<div id="slide">
+<p>La montaña más alta del mundo es el EVEREST con una altitud de 8.848 metros</p>
+</div>
+<p id="click">** RESPUESTA **</p>
+<script>
+$(document).ready(function() {
+$("#click").click(function(){
+$("#slide").slideDown("slow");
+  });
+ });
+</script> 
+</body>
+</html>

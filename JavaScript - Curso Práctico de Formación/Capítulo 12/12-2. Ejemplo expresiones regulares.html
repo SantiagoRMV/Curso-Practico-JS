@@ -1,0 +1,25 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejemplo método replace()</title>
+    </head>
+    <body>
+<form action="" id="formu"><p>
+Escriba una frase con la palabra idiota, tonto o payaso 
+<input type="text" size="60" id="data">
+<br /> 
+Resultado del filtro <br />
+<input type="text" id="casillaresultado" size="60">
+<input type="button" value="Filtrar" onclick="testeo();"></p>
+</form>
+<script>
+function testeo() {
+let cambio="[palabra prohibida]";
+let txt=document.forms.formu.data.value; 
+resultado= txt.replace(/idiota|tonto|payaso/, cambio);
+document.forms.formu.casillaresultado.value=resultado;
+}
+</script>
+</body>
+</html>

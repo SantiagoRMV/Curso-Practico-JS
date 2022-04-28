@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Ejemplo método getComputedStyle()</title>
+ </head>
+<body>
+<p style="width: 600px; margin: 0 auto; padding: 20px; font: 2rem/2 sans-serif; text-align: justify;
+background:rgb(245, 241, 9)"></p>  
+<script>
+let etiqueta = document.querySelector("p");
+let ver_estilo = window.getComputedStyle(etiqueta);
+etiqueta.textContent = "La fuente que uso es  " + 
+    ver_estilo.getPropertyValue("font-size") +
+    "\ny la alineación del texto es  " +
+    ver_estilo.getPropertyValue("text-align") + ".";
+</script>
+</body>
+</html>
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Ejemplo matrices multidimensionales</title>
+<body>
+<script>
+let alumnos = new Array("Carlos", "Nieves", "Lydia", "Sonia");
+let asignatura = new Array("física", "química", "idioma", "dibujo");
+Carlos = new Array(7, 6.5, 4, 8);
+Nieves = new Array(6, 7, 5, 7);
+Lydia = new Array(5, 8, 9.5, 6.5);
+Sonia = new Array(10, 10, 10, 10);
+let calificaciones = new Array(Carlos, Nieves, Lydia, Sonia);
+document.write("<table border ='1'><tr><td>Calificaciones</td>");
+for (columnas=0; columnas <4; columnas ++) {
+document.write("<td>" + asignatura[columnas] + "</td>");
+}
+document.write("</tr>");
+for (filas=0; filas <4; filas ++) {
+document.write("<tr><td>" + alumnos[filas]+ "</td>");
+for (contenido=0; contenido <4; contenido ++) {
+document.write("<td><sub>[" + filas + "][" + contenido + "]</sub>" + "<h3>" + calificaciones[filas][contenido] + "</td>");
+}
+document.write("</tr>");
+}
+document.write("</table>");
+</script></body></html>
+
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Declaración switch</title>
+<body>
+<script>
+let operador;
+operador = prompt ("Introduce el operador [+, -, *, /]")
+let valor1 = 20, valor2 = 4;
+    switch (operador)
+    {
+    case '+':
+            document.write("20 + 4 = " + (valor1 + valor2));
+            break;
+    case '-':
+            document.write("20 - 4 = " + (valor1 - valor2));
+            break;           
+    case '*':
+            document.write("20 * 4 = " + (valor1 * valor2));
+            break;
+    case '/':
+            document.write("20 / 4 = " + (valor1 / valor2));
+            break;
+    default:
+            document.write("<b>Has introducido un operador incorrecto. ");
+            document.write("<br \>Los operadores permitidos son: +, -, *, /</b>");
+    }
+</script>
+</body>
+</html>

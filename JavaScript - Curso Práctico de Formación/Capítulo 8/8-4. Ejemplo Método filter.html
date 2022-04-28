@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Ejemplo Método filter()</title>
+<body>
+<script>
+let palabras = ["camión", "coche", "Autobús", "moto", "bici", "tren"];
+let resultado = palabras.filter(function (texto) {
+  if (texto.length <= 4) {
+    return true
+  }
+});
+document.write(resultado) // ["moto", "bici", "tren"]
+ </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

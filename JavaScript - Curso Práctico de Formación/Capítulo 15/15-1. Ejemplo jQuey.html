@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+<title>Ejemplo jQuery</title>
+<script src="jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<p>Párrafo que no se verá en el navegador por estár oculto</p>
+<a href="#">Haz click en el enlace para ocultarlo</a>
+<script>
+$("p").hide();
+$("a").click(function(event) {
+  event.preventDefault();
+  $(this).hide();
+});
+</script> 
+</body>
+</html>

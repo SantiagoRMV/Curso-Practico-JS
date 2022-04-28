@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Ejemplo Evento onresize</title>
+</head>
+<body onload="script_quenoexiste()">
+<script>
+function mis_errores(msg,url,lno)
+{
+alert('ERROR EN EL DOCUMENTO\n' + msg + '\n\nDirección(URL)\n' + url + '\n\nError en línea\n' + lno)
+return true
+}
+window.onerror=mis_errores
+</script>
+</body>
+</html>
+
+

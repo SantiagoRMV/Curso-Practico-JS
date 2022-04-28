@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Ejsociolo de call()</title>
+<body>
+<script>
+function socio(id,nombre) {
+  this.id = id;
+  this.nombre = nombre;
+}
+function socioVIP(id,nombre) {
+ socio.call(this,id,nombre);
+}
+function sociotemporal(id,nombre) {
+ socio.call(this,id,nombre);
+}
+let VIP_socio = new socioVIP(1001,"Carlos Orós");
+let temp_socio = new sociotemporal(2001,"Pedro Manzanilla")
+document.write (VIP_socio.id + " " + VIP_socio.nombre + "<br />");
+document.write (temp_socio.id + " " + temp_socio.nombre);
+</script>
+</body>
+</html>

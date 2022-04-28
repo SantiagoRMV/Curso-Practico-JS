@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Ejemplo Función</title>
+<body>
+<script>
+function calculadoraIVA(precio,porcentaje){
+  let valorIVA = (precio/100)*porcentaje;
+  console.log("El IVA es de " + valorIVA + ' Euros');
+  document.write("el precio final es de " + (precio + valorIVA) + " Euros");
+}
+calculadoraIVA(1500,21);
+</script>
+</body>
+</html>

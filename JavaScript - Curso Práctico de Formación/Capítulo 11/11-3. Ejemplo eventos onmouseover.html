@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Ejemplo Eventos onmouseover y onmouseout</title>
+</head>
+<body>
+<p>ABRIR Y CERRAR OJOS AL PASAR EL RATÓN POR ENCIMA</p>
+<img onmouseover = "cambio_foto1()"onmouseout= "Cambio_foto2()" id="imagen" src="ojos_open.jpg" width="657" height="137">
+<p>REDIMENSIONAR IMAGEN AL PASAR EL RATÓN POR ENCIMA</p>
+<img onmouseover="imagen_grande(this)" onmouseout="imagen_normal(this)" src="smiley.jpg" width="197" height="200">
+<script>
+function cambio_foto1() {
+  document.getElementById("imagen").src = "ojos_closed.jpg";
+}
+function Cambio_foto2() {
+  document.getElementById("imagen").src = "ojos_open.jpg";
+}
+function imagen_grande(x) {
+  x.style.height = "300px";
+  x.style.width = "300px";
+}
+function imagen_normal(x) {
+  x.style.height = "197px";
+  x.style.width = "200px";
+}
+</script>
+</body>
+</html>

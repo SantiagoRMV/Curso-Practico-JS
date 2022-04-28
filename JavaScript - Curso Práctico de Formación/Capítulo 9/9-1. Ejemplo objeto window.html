@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Ejemplo método clearInterval</title>
+ </head>
+<body>
+<p>ATENCIÓN. SE HA PRODUCIDO UN ERROR!!!</p>    
+<script>
+let temporiza = setInterval(setColor, 500);
+
+ function setColor() {
+   let color = document.body;
+   color.style.backgroundColor = color.style.backgroundColor == "red" ? "white" : "red";
+ }
+ function stop() {
+   clearInterval(temporiza);
+ }
+</script>
+<button onclick="stop()">OK. Entendido!!!</button>
+</body>
+</html>
+

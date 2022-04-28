@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+<title>Ejemplo verificar input</title>
+</head>
+<body>
+<form id="frm">
+<input type="text" id="Nombre" size="18">
+<input type="button" value="Verificar" onclick="verificar();">
+</form>
+<script>
+function verificar() {
+if (document.forms.frm.Nombre.value=="")
+{
+alert("ERROR!!!\n\n El campo está vacío.");
+}
+else
+{ 
+alert("CORRECTO!!!\n\n El campo está cumplimentado.");
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+<title>Ejemplo Interacción entre Formularios</title>
+</head>
+<body>
+<form id="form1">
+<input type="text" size="18">
+</form>
+<form id="form2">
+<input type="text" size="18">
+</form>
+<form id="form3">
+<input type="text" id="casilla" size="18">
+</form>
+<form>
+<input type="button" id="" value="Pasar de 1 a 2" onclick="Pas1()">
+<input type="button" id="" value="Pasar de 2 a 3" onclick="Pas2()">
+</form>
+<script>
+function Pas1() {
+document.forms[1].elements[0].value = document.forms.form1.elements[0].value;
+}
+function Pas2() {
+document.forms.form3.casilla.value = document.forms[1].elements[0].value;
+}
+</script>
+</body>
+</html>

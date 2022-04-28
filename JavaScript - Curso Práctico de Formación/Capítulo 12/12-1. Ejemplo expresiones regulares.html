@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Ejemplo método test()</title>
+</head>
+<body>
+<form action="" id="formu">
+<p>Introduzca un e-mail <input type="text" id="data">
+Resultado verificaci&oacute;n
+<input type="text" id="casillaresultado" size="10">
+<input type="button" value="Verificar" onclick="testeo();">
+</p>
+</form>
+<script>
+function testeo()
+{
+let txt=document.forms.formu.data.value; 
+let patron = /@/;
+document.forms.formu.casillaresultado.value = patron.test(txt);
+}
+</script>
+</body>
+</html>

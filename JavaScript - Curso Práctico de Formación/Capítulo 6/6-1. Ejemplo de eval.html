@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Ejemplo de eval()</title>
+<body>
+<script>
+let resultado;
+function suma(a, b)
+{
+    return a + b;
+}
+eval("resultado = suma(5, 5);");
+alert(resultado);
+eval ("document.write('a + b')");
+eval ("alert('Esta ventana se ha generado con eval()')");
+</script>
+</body>
+</html>

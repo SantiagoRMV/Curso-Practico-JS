@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Ejemplo método replaceChild()</title>
+</head>
+<body>
+<ul id="listado">
+<li>Prólogo</li>
+<li>Capítulo 2</li>
+<li>Capítulo 3</li>
+<li>Capítulo 4</li>
+</ul>
+<button onclick="replace()">Reemplazar nodo</button>
+<script>
+let listado = document.getElementById('listado');
+function replace() {       
+let li = document.createElement('li');
+li.textContent = 'Capítulo 1';
+listado.replaceChild(li, listado.firstElementChild);
+let li2 = document.createElement('li');
+li2.textContent = 'Apéndice 1';
+listado.replaceChild(li2, listado.lastElementChild);
+}
+</script>
+</body>
+</html>

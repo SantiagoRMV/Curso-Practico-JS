@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Ejemplo Evento onmousemove</title>
+</head>
+<body>
+<div  id="recuadro" style = "background-color:yellowgreen; width: 200px; height: 100px; border: 1px solid black"></div>
+<p id="txt_pantalla"></p>
+</div>
+<script>
+document.getElementById("recuadro").onmousemove = function(event) {myFunction(event)};
+function myFunction(e) {
+  let coorde_x = e.clientX;
+  let coorde_y = e.clientY;
+  let coordenadas = "Coordenadas cursor: (" + coorde_x+ "," + coorde_y + ")";
+  document.getElementById("txt_pantalla").innerHTML = coordenadas;
+}
+</script>
+</body>
+</html>
+

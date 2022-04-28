@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Ejemplo método setAttribute()</title>
+</head>
+<body>
+<input value="Introducir valor">
+<p>Pulsa en el botón para cambiar el atributo del elemento anterior.</p>
+<button onclick="Cambia_Atributo()">Cambiar atributo</button>
+<script>
+function Cambia_Atributo() {
+  document.getElementsByTagName("input").setAttribute("type", "button"); 
+}
+</script>
+</body>
+</html>
+
+

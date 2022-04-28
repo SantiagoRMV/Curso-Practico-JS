@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Ejemplo Evento onresize</title>
+</head>
+<body onresize="resize()">
+<p>Cambiar el tamaño de la pantalla</p>
+<p id="medidas_pantalla"></p>
+<script>
+function resize() {
+let resolucion = document.getElementById("medidas_pantalla");
+let h = window.outerHeight;
+let txt = "ancho=" + w + ", alto=" + h;
+resolucion.innerHTML = txt;
+  }
+</script>
+</body>
+</html>
+
